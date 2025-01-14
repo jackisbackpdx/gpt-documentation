@@ -1,0 +1,495 @@
+/* ---------------------- Global Styles ---------------------- */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #fff;
+    color: #333;
+    scroll-behavior: smooth; /* Smooth scrolling */
+  }
+  
+  body {
+    line-height: 1.6;
+  }
+  
+  /* ---------------------- Header ---------------------- */
+  header {
+    background: linear-gradient(135deg, #0052cc, #3a7bd5);
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative; /* For hamburger icons positioning */
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+    font-weight: 500;
+  }
+  
+  /* ---------------------- Hamburger Icons (Hidden by default on desktop) ---------------------- */
+  .hamburger-left,
+  .hamburger-right {
+    display: none;     /* Only show on mobile */
+    font-size: 1.8rem;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0.5rem;
+  }
+  .hamburger-left {
+    left: 1rem;
+  }
+  .hamburger-right {
+    right: 1rem;
+  }
+  
+  /* ---------------------- Wrapper & Layout ---------------------- */
+  .wrapper {
+    display: flex;
+    gap: 1.5rem;       /* Space between columns */
+    max-width: 1500px; 
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+  
+  .container {
+    flex: 1;
+    padding: 2rem 0;
+  }
+  
+  /* ---------------------- Left Sidebar (nav.sidebar) ---------------------- */
+  nav.sidebar {
+    flex: 0 0 250px;
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 2rem 1rem;
+    margin-right: 1.5rem;
+    border-radius: 6px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+    height: auto;
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Close "X" button inside each sidebar */
+  .close-sidebar {
+    display: none;        /* Hidden on desktop, shown on mobile */
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    text-align: right;    /* "X" is on the right side inside the sidebar */
+  }
+  
+  /* When .open is toggled (on mobile), slides the sidebar into view. */
+  nav.sidebar.open {
+    transform: translateX(0);
+  }
+  
+  nav.sidebar h2 {
+    margin-top: 0;
+    font-size: 1.4rem;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding-bottom: 0.5rem;
+  }
+  nav.sidebar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  nav.sidebar ul li {
+    margin-bottom: 1rem;
+  }
+  nav.sidebar ul li a {
+    text-decoration: none;
+    color: #ecf0f1;
+    font-size: 1rem;
+    transition: color 0.2s;
+  }
+  nav.sidebar ul li a:hover {
+    color: #3a7bd5;
+  }
+  nav.sidebar .extra-pages {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255,255,255,0.2);
+  }
+  
+  /* Left sidebar "addon" boxes */
+  .left-sidebar-addon {
+    margin-top: 1.5rem;
+  }
+  .left-sidebar-addon .sidebar-box {
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    position: relative;
+  }
+  .left-sidebar-addon .sidebar-box h2,
+  .left-sidebar-addon .sidebar-box h3 {
+    margin-top: 0;
+    color: #2c3e50;
+  }
+  .left-sidebar-addon .sidebar-box p {
+    font-size: 0.95rem;
+    color: #555;
+  }
+  .left-sidebar-addon .sidebar-box a {
+    color: #3a7bd5;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .left-sidebar-addon .sidebar-box a:hover {
+    text-decoration: underline;
+  }
+  
+  /* ---------------------- Right Sidebar ---------------------- */
+  .right-sidebar {
+    flex: 0 0 250px;
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 2rem 1rem;
+    margin-left: 1.5rem;
+    border-radius: 6px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+    height: auto;
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+  
+  .right-sidebar.open {
+    transform: translateX(0);
+  }
+  
+  /* The "X" close button for the right sidebar */
+  .right-sidebar .close-sidebar {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    text-align: right;
+  }
+  
+  .right-sidebar h2 {
+    margin-top: 0;
+    font-size: 1.4rem;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding-bottom: 0.5rem;
+  }
+  .right-sidebar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .right-sidebar ul li {
+    margin-bottom: 1rem;
+  }
+  .right-sidebar ul li a {
+    text-decoration: none;
+    color: #ecf0f1;
+    font-size: 1rem;
+    transition: color 0.2s;
+  }
+  .right-sidebar ul li a:hover {
+    color: #3a7bd5;
+  }
+  
+  /* ---------------------- Documentation Main Content ---------------------- */
+  .category {
+    margin-bottom: 3rem;
+  }
+  .category h2 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #0052cc;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 0.5rem;
+  }
+  .subcategory {
+    margin-bottom: 1.5rem;
+  }
+  .subcategory h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 1rem 0 0.5rem;
+  }
+  .subcategory p {
+    margin: 0.5rem 0 1rem;
+    color: #555;
+    line-height: 1.5;
+  }
+  
+  /* Code Blocks (Dark Theme) */
+  pre {
+    background: #272822;
+    color: #f8f8f2;
+    padding: 15px;
+    margin: 20px auto;
+    border-radius: 4px;
+    overflow-x: auto;
+    font-size: 14px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+    width: 90%;
+    max-width: 800px;
+    text-align: left;
+  }
+  
+  /* ---------------------- Footer ---------------------- */
+  footer {
+    background-color: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 1.5rem;
+  }
+  footer p {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+  footer a {
+    color: #3a7bd5;
+    text-decoration: none;
+    margin: 0 3px;
+  }
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
+  /* ---------------------- Soccer Minesweeper ---------------------- */
+/* --------------------------- Layout & Buttons --------------------------- */
+
+/* Button rows (for difficulty buttons, hint, new game) */
+.button-row {
+    margin: 0.5rem 0;
+  }
+  
+  /* Difficulty buttons & hint button share a style */
+  .difficulty-button,
+  #hint-button {
+    display: inline-block;
+    padding: 8px 14px;
+    margin: 2px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+    background-color: #0052cc;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  .difficulty-button:hover,
+  #hint-button:hover {
+    background-color: #003c99;
+  }
+  
+  /* Score & timer row */
+  #score-timer-row {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  #score-timer-row > div {
+    font-size: 1.1rem;
+    background: #f0f0f0;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+  }
+  
+  /* Stats panel */
+  .stats-panel {
+    margin: 1rem auto;
+    max-width: 350px;
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 6px;
+    text-align: left;
+  }
+  .stats-panel h3 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    color: #333;
+  }
+  .stats-panel p {
+    margin: 0.3rem 0;
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+  
+  /* --------------------------- Minesweeper Board --------------------------- */
+  #minesweeper-container {
+    margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fafafa;
+  color: #333;
+  text-align: center;
+  padding: 1rem;
+  }
+  #game {
+    display: inline-block;
+    margin: 20px auto;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    padding: 5px;
+  }
+  
+  /* Individual cells */
+  .cell {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    margin: 2px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    line-height: 30px;       /* Match the cell height for vertical centering */
+    text-align: center;      /* Center text horizontally */
+    vertical-align: middle;  /* Align text vertically */
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #333;
+    background-color: #fff;
+    transition: background-color 0.2s;
+    box-sizing: border-box;
+  }
+  .cell:hover {
+    background-color: #f2f2f2;
+  }
+  .cell.revealed {
+    background-color: #eaeaea;
+    color: #555;
+    cursor: default;
+    border: 1px solid #ccc;
+  }
+  .cell.flagged {
+    background-color: #3a7bd5;
+    color: #fff;
+    font-size: 1.2rem;
+  }
+  .cell.mine {
+    background-color: #e74c3c;
+    color: #fff;
+    font-size: 1.2rem;
+  }
+  
+  /* --------------------------- Controls & Dropdown --------------------------- */
+  
+  .controls {
+    position: relative;
+    display: inline-block;
+    margin-top: 10px; /* Space above the dropdown or other controls */
+  }
+  
+  .dropdown-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    min-width: 160px;
+  }
+  .dropdown-content div {
+    padding: 10px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  .dropdown-content div:hover {
+    background-color: #f0f0f0;
+    border: 1px solid red;
+  }
+  .dropdown-button:focus + .dropdown-content,
+  .dropdown-content:hover {
+    display: block;
+  }
+  
+  /* Layout for the main buttons (if you have a row of them) */
+  .main-buttons {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  
+  /* ---------------------- Responsive Layout & Off-Canvas ---------------------- */
+  @media (max-width: 768px) {
+  
+    /* Show hamburger icons, hide sidebars by default */
+    .hamburger-left,
+    .hamburger-right {
+      display: block;
+    }
+  
+    /* Stack all sections vertically */
+    .wrapper {
+      flex-direction: column;
+    }
+  
+    /* Off-canvas for left sidebar */
+    nav.sidebar {
+      position: fixed;
+      top: 0; left: 0;
+      width: 250px;
+      height: 100%;
+      margin-right: 0;
+      border-radius: 0;
+      transform: translateX(-100%); /* Hidden off-screen */
+      z-index: 999;
+    }
+    nav.sidebar.open {
+      transform: translateX(0);
+    }
+  
+    /* Show the close button (X) in mobile view */
+    nav.sidebar .close-sidebar {
+      display: block;
+    }
+  
+    /* Off-canvas for right sidebar */
+    .right-sidebar {
+      position: fixed;
+      top: 0; right: 0;
+      width: 250px;
+      height: 100%;
+      margin-left: 0;
+      border-radius: 0;
+      transform: translateX(100%); /* Hidden off-screen */
+      z-index: 999;
+    }
+    .right-sidebar.open {
+      transform: translateX(0);
+    }
+    .right-sidebar .close-sidebar {
+      display: block;
+    }
+  
+    .right-sidebar {
+      margin-top: 0; /* override existing margin-top if any */
+    }
+  }
+  

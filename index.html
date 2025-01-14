@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ChatGPT Technical Documentation</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="main.js"></script>
+  <script src="soccer-minesweeper.js"></script>
+</head>
+<body>
+  
+
+  <!-- Header with hamburger icons (left and right) -->
+  <header>
+    <!-- Left hamburger icon -->
+    <div class="hamburger-left" onclick="toggleLeftSidebar()">&#9776;</div>
+    <h1>ChatGPT Technical Documentation</h1>
+    <!-- Right hamburger icon -->
+    <div class="hamburger-right" onclick="toggleRightSidebar()">&#9776;</div>
+  </header>
+
+  <div class="wrapper">
+    <!-- Left Sidebar -->
+    <nav class="sidebar" id="sidebar-left">
+        <div class="close-sidebar" onclick="closeLeftSidebar()">✕</div>
+
+      <h2>Documentation</h2>
+      <ul>
+        <li><a href="#clarity">Clarity</a></li>
+        <li><a href="#formatting">Formatting</a></li>
+        <li><a href="#context">Context</a></li>
+        <li><a href="#refinement">Refinement</a></li>
+        <li><a href="#advanced-techniques">Advanced Techniques</a></li>
+        <li><a href="#api-integration">API Integration</a></li>
+        <li><a href="#error-handling">Error Handling</a></li>
+        <li><a href="#security">Security Best Practices</a></li>
+      </ul>
+
+      <div class="extra-pages">
+        <h2>Other Pages</h2>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="getting-started.html">Getting Started</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="changelog.html">Changelog</a></li>
+        </ul>
+      </div>
+
+      <div class="more">
+        <div class="left-sidebar-addon">
+          <!-- Example: Three boxes within the sidebar -->
+          <div class="sidebar-box">
+            <h2>Fun Information</h2>
+            <p>Did you know? The first chatbot, ELIZA, was created in the 1960s!</p>
+            <p>Fact: Over 70% of developers use APIs daily.</p>
+          </div>
+          <div class="sidebar-box">
+            <h2>Sidebar Ads</h2>
+            <h3>Master APIs Today</h3>
+            <p>Check out our <a href="#">API Integration Course</a> for only $29.99!</p>
+          </div>
+          <div class="sidebar-box">
+            <h3>Need Help?</h3>
+            <p>Join our <a href="#">Community Forum</a> and get answers from experts.</p>
+          </div>
+        </div>
+      </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <div class="container">
+        <div class="category" id="clarity">
+            <h2>Clarity and Specificity</h2>
+            <div class="subcategory">
+              <h3>Why It Matters</h3>
+              <p>Clear prompts yield precise responses. Avoid ambiguity by specifying details.</p>
+              <pre><code>    // Example
+        "Describe the lifecycle of a butterfly in five bullet points."
+    
+        // Example
+        "List three benefits of exercise, including scientific evidence."
+    
+        // Example
+        "Write a Python function to calculate the factorial of a number."
+    
+        // Example
+        "Provide a summary of the Great Gatsby, focusing on the theme of the American Dream."
+    
+        // Example
+        "Create a step-by-step guide to setting up a React application using Vite."
+              </code></pre>
+            </div>
+          </div>
+    
+          <div class="category" id="formatting">
+            <h2>Structured Formatting</h2>
+            <div class="subcategory">
+              <h3>Use Markdown</h3>
+              <p>Organize outputs with Markdown for enhanced readability.</p>
+              <pre><code>    // Markdown Example
+        **Steps to bake a cake:**
+        1. Preheat the oven to 350°F.
+        2. Mix ingredients.
+        3. Bake for 30 minutes.
+    
+        // Markdown Example
+        **Steps to troubleshoot an error:**
+        1. Identify the issue.
+        2. Check error logs.
+        3. Implement a fix and retest.
+    
+        // Markdown Example
+        **Daily Routine:**
+        - Wake up at 7 AM.
+        - Exercise for 30 minutes.
+        - Start work at 9 AM.
+              </code></pre>
+            </div>
+          </div>
+    
+          <div class="category" id="context">
+            <h2>Context Provision</h2>
+            <div class="subcategory">
+              <h3>Adding Background</h3>
+              <p>Provide context to help tailor responses.</p>
+              <pre><code>    // Example
+        "As a student studying computer science, I need..."
+    
+        // Example
+        "As a small business owner in the food industry, I need advice on..."
+    
+        // Example
+        "For a marketing campaign targeting Gen Z, suggest..."
+    
+        // Pro Tip
+        Use role-based prompts to align the response contextually with the intended audience.
+              </code></pre>
+            </div>
+          </div>
+    
+          <div class="category" id="refinement">
+            <h2>Iterative Refinement</h2>
+            <div class="subcategory">
+              <h3>Improvement Through Feedback</h3>
+              <p>Iterate on phrasing to hone precision and clarity.</p>
+              <pre><code>    // Example
+        "Rewrite this paragraph to make it more concise."
+    
+        // Example
+        "Improve this SQL query for performance optimization."
+    
+        // Example
+        "Reformat this code to follow best practices in Python."
+    
+        // Pro Tip
+        Iterative feedback enables better fine-tuning of responses for complex tasks.
+              </code></pre>
+            </div>
+          </div>
+    
+          <div class="category" id="advanced-techniques">
+            <h2>Advanced Techniques</h2>
+            <div class="subcategory">
+              <h3>Meta-Prompting</h3>
+              <p>Guide the model's behavior by defining rules within the prompt.</p>
+              <pre><code>    // Example
+        "Respond as if you are a professional chef explaining knife skills."
+    
+        // Example
+        "Act as a project manager and create a project timeline for launching a website."
+    
+        // Example
+        "Write a detailed tutorial on how to use Git for beginners, with examples."
+    
+        // Pro Tip
+        Meta-prompting enhances control over tone, depth, and scope of responses.
+              </code></pre>
+            </div>
+          </div>
+    
+          <div class="category" id="api-integration">
+            <h2>API Integration</h2>
+            <div class="subcategory">
+              <h3>Connecting to APIs</h3>
+              <p>Learn how to connect your application to third-party APIs using clear and concise requests.</p>
+              <pre><code>    // Example
+        fetch('https://api.example.com/data')
+          .then(response => response.json())
+          .then(data => console.log(data));
+    
+        // Example
+        axios.get('https://api.example.com/data')
+          .then(response => console.log(response.data));
+    
+        // Example
+        async function fetchData() {
+          try {
+            const response = await fetch('https://api.example.com/data');
+            const data = await response.json();
+            console.log(data);
+          } catch (error) {
+            console.error('Error fetching data:', error);
+          }
+        }
+    
+        // Pro Tip
+        Use async/await for cleaner, more readable asynchronous code.
+              </code></pre>
+            </div>
+          </div>
+    
+          <div class="category" id="error-handling">
+            <h2>Error Handling</h2>
+            <div class="subcategory">
+              <h3>Best Practices</h3>
+              <p>Implement robust error handling to manage unexpected scenarios gracefully.</p>
+              <pre><code>    // Example
+        try {
+          performTask();
+        } catch (error) {
+          console.error("An error occurred:", error);
+        }
+    
+        // Example
+        if (!data) {
+          throw new Error("Data is required to proceed.");
+        }
+    
+        // Example
+        process.on('uncaughtException', (error) => {
+          console.error('Unhandled error:', error);
+          process.exit(1);
+        });
+    
+        // Pro Tip
+        Combine error logs with alerting systems for proactive issue resolution.
+              </code></pre>
+            </div>
+          </div>
+          
+        <!-- Soccer-Themed Minesweeper Game -->
+        <div id="minesweeper-container">
+            <h1>Soccer-Themed Minesweeper</h1>
+
+            <!-- Button Row 1: Difficulty & Hint -->
+            <div class="button-row">
+              <button class="difficulty-button" onclick="setDifficulty('beginner')">Beginner</button>
+              <button class="difficulty-button" onclick="setDifficulty('intermediate')">Intermediate</button>
+              <button class="difficulty-button" onclick="setDifficulty('expert')">Expert</button>
+              <button id="hint-button" onclick="useHint()">Use Hint (3 left)</button>
+            </div>
+          
+            <!-- Button Row 2: New Game below the first row -->
+            <div class="button-row">
+              <button class="difficulty-button" onclick="initGame()">New Game</button>
+            </div>
+          
+            <!-- Score & Timer row -->
+            <div id="score-timer-row">
+              <div id="score">Wins: 0 | Losses: 0</div>
+              <div class="timer-label">Time: <span id="timer">0</span> sec</div>
+            </div>
+          
+            <!-- Stats panel (styled box) -->
+            <div id="stats" class="stats-panel">
+              <!-- We'll populate this from JS -->
+            </div>
+          
+            <!-- The Minesweeper board container -->
+            <div id="game"></div>
+          </div>
+        </div>
+  
+        <!-- Add more categories, subcategories, etc. -->
+  
+        <div class="right-sidebar" id="sidebar-right">
+            <div class="close-sidebar" onclick="closeRightSidebar()">✕</div>
+          <h2>Recommended Articles</h2>
+          <ul>
+            <li><a href="#">How to Write Effective Prompts</a></li>
+            <li><a href="#">Top 10 ChatGPT Use Cases</a></li>
+            <li><a href="#">Improving AI Outputs with Context</a></li>
+          </ul>
+    
+          <h2>Interactive Tools</h2>
+          <p>Try our new <a href="#">Prompt Builder</a> to create tailored instructions.</p>
+    
+          <h2>Newsletter</h2>
+          <p>Stay updated with the latest AI trends. <a href="#">Subscribe now!</a></p>
+    
+          <h2>Special Offers</h2>
+          <div class="offer">
+            <p><strong>50% Off</strong> on premium documentation templates! <a href="#">Claim now</a></p>
+          </div>
+        </div>
+      </div><!-- End of .container -->
+
+    <!-- Right Sidebar -->
+  </div><!-- .wrapper -->
+
+  <footer>
+    <p>
+      &copy; 2025 ChatGPT Docs. All rights reserved.
+      | <a href="#">Privacy Policy</a>
+      | <a href="#">Terms of Service</a>
+    </p>
+  </footer>
+
+  <!-- Main JS -->
+
+</body>
+</html>
