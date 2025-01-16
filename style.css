@@ -13,39 +13,65 @@ html, body {
   }
   
   /* ---------------------- Header ---------------------- */
+  body {
+    line-height: 1.6;
+  }
+  
+  /* ---------------------- Header ---------------------- */
   header {
     background: linear-gradient(135deg, #0052cc, #3a7bd5);
     color: #fff;
     text-align: center;
     padding: 1.5rem 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    position: relative; /* For hamburger icons positioning */
+    position: relative; /* For positioning elements */
+    display: flex; /* Flexbox for alignment */
+    align-items: center; /* Vertically center items */
+    justify-content: space-between; /* Space between elements */
   }
   
   header h1 {
     margin: 0;
     font-size: 2.2rem;
     font-weight: 500;
+    flex-grow: 1; /* Center the website name */
+    text-align: center; /* Ensure text stays centered */
   }
   
-  /* ---------------------- Hamburger Icons (Hidden by default on desktop) ---------------------- */
+  /* ---------------------- Logo ---------------------- */
+  header .logo {
+    margin-right: 1rem; /* Add spacing to the right */
+  }
+  
+  /* ---------------------- Hamburger Icons ---------------------- */
   .hamburger-left,
   .hamburger-right {
-    display: none;     /* Only show on mobile */
+    display: none; /* Hidden by default on desktop */
     font-size: 1.8rem;
     cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
     padding: 0.5rem;
   }
+  
   .hamburger-left {
+    position: absolute;
     left: 1rem;
   }
+  
   .hamburger-right {
+    position: absolute;
     right: 1rem;
   }
-  
+  /* ---------------------- Hamburger Icons (Hidden by default on desktop) ---------------------- */
+  @media (max-width: 768px) {
+    .hamburger-left,
+    .hamburger-right {
+      display: block; /* Show on smaller screens */
+    }
+    
+    header {
+      padding: 1rem; /* Adjust padding for smaller screens */
+    }
+  }
   /* ---------------------- Wrapper & Layout ---------------------- */
   .wrapper {
     display: flex;
