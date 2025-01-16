@@ -50,7 +50,7 @@ html, body {
   .wrapper {
     display: flex;
     gap: 1.5rem;       /* Space between columns */
-    max-width: 1500px; 
+    max-width: 1800px; 
     margin: 0 auto;
     padding: 0 1.5rem;
   }
