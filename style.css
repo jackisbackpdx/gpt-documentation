@@ -40,7 +40,8 @@ html, body {
   
   /* ---------------------- Logo ---------------------- */
   header .logo {
-    margin-right: 1rem; /* Add spacing to the right */
+    margin-right: 3.2rem; /* Add spacing to the right */
+    border-radius: 3px;
   }
   
   /* ---------------------- Hamburger Icons ---------------------- */
