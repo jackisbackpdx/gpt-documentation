@@ -241,6 +241,14 @@ html, body {
     border-bottom: 1px solid #e0e0e0;
     padding-bottom: 0.5rem;
   }
+  .title {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #0052cc;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 0.5rem;
+  }
   .subcategory {
     margin-bottom: 1.5rem;
   }

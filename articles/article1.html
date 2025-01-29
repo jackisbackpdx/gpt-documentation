@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ChatGPT Technical Documentation - How to Write Effective Prompts</title>
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../main.js"></script>
+  <style>
+    /* Additional Styles Required for This Page */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .subcategory ul {
+      padding-left: 1.5rem;
+    }
+    .subcategory ul li {
+      margin-bottom: 0.5rem;
+    }
+    .close-sidebar {
+      display: block;
+      text-align: right;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+    .sidebar-box {
+      background-color: #fff;
+      border-radius: 6px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  
+  <!-- Header with hamburger icons (left and right) -->
+  <header>
+    <div class="hamburger-left" onclick="toggleLeftSidebar()">&#9776;</div>
+    <h1>ChatGPT Technical Documentation</h1>
+    <img class="logo" height="55px" width="55px" src="../tech_startup_logo.jpg" alt="Logo">
+    <div class="hamburger-right" onclick="toggleRightSidebar()">&#9776;</div>
+  </header>
+
+  <div class="wrapper">
+    <!-- Left Sidebar -->
+    <nav class="sidebar" id="sidebar-left">
+      <div class="close-sidebar" onclick="closeLeftSidebar()">✕</div>
+      <h2>Documentation</h2>
+      <ul>
+        <li><a href="../index.html#clarity">Clarity</a></li>
+        <li><a href="../index.html#formatting">Formatting</a></li>
+        <li><a href="../index.html#context">Context</a></li>
+        <li><a href="../index.html#refinement">Refinement</a></li>
+        <li><a href="../index.html#advanced-techniques">Advanced Techniques</a></li>
+        <li><a href="../index.html#api-integration">API Integration</a></li>
+        <li><a href="../index.html#error-handling">Error Handling</a></li>
+      </ul>
+      
+      <h2>Other Pages</h2>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="getting-started.html">Getting Started</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="changelog.html">Changelog</a></li>
+      </ul>
+      
+      <div class="left-sidebar-addon">
+        <div class="sidebar-box">
+          <h2>Fun Information</h2>
+          <p>Did you know? The first chatbot, ELIZA, was created in the 1960s!</p>
+          <p>Fact: Over 70% of developers use APIs daily.</p>
+        </div>
+        <div class="sidebar-box">
+          <h2>Sidebar Ads</h2>
+          <h3>Master APIs Today</h3>
+          <p>Check out our <a href="#">API Integration Course</a> for only $29.99!</p>
+        </div>
+        <div class="sidebar-box">
+          <h3>Need Help?</h3>
+          <p>Join our <a href="#">Community Forum</a> and get answers from experts.</p>
+        </div>
+      </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <div class="container">
+        <div class="category">
+          <h2>How to Write Effective Prompts</h2>
+          <p>
+            Writing effective prompts is an essential skill that ensures you receive accurate, contextually relevant, and useful responses. Whether you're using prompts for creative tasks, technical queries, or research purposes, understanding how to structure them can make a significant difference in the quality of the output. This guide will explore the key strategies for crafting impactful prompts, supported by examples and practical tips.
+          </p>
+      
+          <div class="subcategory">
+            <h3>1. Be Specific and Clear</h3>
+            <p>
+              A clear and specific prompt reduces ambiguity and leads to more precise responses. Avoid general or vague requests, as they may produce results that lack focus or relevance. Define the exact output you need, whether it's a summary, a step-by-step guide, or an explanation.
+            </p>
+            <ul>
+              <li>❌ Vague: <em>“Explain exercise benefits.”</em></li>
+              <li>✅ Better: <em>“List three scientific benefits of moderate daily exercise, including references to cardiovascular health.”</em></li>
+            </ul>
+            <p>
+              Additional Tip: If you're asking for code, specify the language, version, and additional requirements (e.g., "Provide a Python function to calculate compound interest, including error handling for invalid inputs").
+            </p>
+          </div>
+      
+          <div class="subcategory">
+            <h3>2. Provide Necessary Context</h3>
+            <p>
+              Context is critical when crafting prompts. The more background information you provide, the better the response will align with your needs. Context helps narrow down the scope of the output and ensures that it is relevant to your specific situation.
+            </p>
+            <ul>
+              <li>❌ Lacking context: <em>“Write a summary of the novel.”</em></li>
+              <li>✅ Contextualized: <em>“Provide a 200-word summary of ‘Pride and Prejudice,’ focusing on its commentary on class and societal expectations.”</em></li>
+            </ul>
+            <p>
+              For professional scenarios, include details such as your role, audience, and goals. For example: “As a marketing manager targeting Gen Z consumers, provide five key strategies for engaging this demographic on social media platforms.”
+            </p>
+          </div>
+      
+          <div class="subcategory">
+            <h3>3. Use Examples for Clarity</h3>
+            <p>
+              When requesting a specific format or style, include an example to illustrate what you're looking for. This reduces guesswork and ensures the response matches your expectations.
+            </p>
+            <ul>
+              <li>❌ Ambiguous: <em>“Write a job description for a software engineer.”</em></li>
+              <li>✅ With example: <em>“Write a concise job description for a front-end software engineer. Format it like this: [Example included].”</em></li>
+            </ul>
+            <p>
+              Additional Tip: Examples are particularly useful for creative tasks. If you're asking for a poem or story, include a snippet of the tone or style you wish to emulate.
+            </p>
+          </div>
+      
+          <div class="subcategory">
+            <h3>4. Break Down Complex Tasks</h3>
+            <p>
+              For multi-step or detailed tasks, break down the request into smaller parts or include a numbered list. This helps ensure all aspects of the task are addressed thoroughly.
+            </p>
+            <p>
+              For example: “Create a project plan for developing a new website. Include the following: 1) Initial brainstorming, 2) Wireframing and design, 3) Backend development, 4) Testing, and 5) Launch strategies.”
+            </p>
+          </div>
+      
+          <div class="subcategory">
+            <h3>5. Iterate and Refine</h3>
+            <p>
+              Don’t hesitate to refine your prompt based on the response you receive. Iteration allows you to clarify any misunderstandings or adjust your query to get closer to the desired result.
+            </p>
+            <p>
+              Example Iterations:
+            </p>
+            <ul>
+              <li>First attempt: “Write a blog post about AI.”</li>
+              <li>Refined prompt: “Write a 500-word blog post about the impact of AI on small businesses, focusing on cost-saving strategies.”</li>
+            </ul>
+            <p>
+              Additional Tip: Use follow-up prompts to expand or tweak the initial response. For instance, “Expand on point three with more examples” or “Rewrite this paragraph to make it more concise.”
+            </p>
+          </div>
+      
+          <div class="subcategory">
+            <h3>6. Keep It Organized</h3>
+            <p>
+              An organized prompt is easier to interpret. Use bullet points, numbered lists, or clearly separated sections to make your request clear. This is particularly useful for multi-part tasks or when asking for comparisons.
+            </p>
+            <p>
+              Example:
+            </p>
+            <pre><code>
+              "Compare three JavaScript frameworks (React, Vue, and Angular) based on:
+              1. Ease of learning
+              2. Performance
+              3. Community support"
+            </code></pre>
+          </div>
+        </div>
+      </div>
+      
+    
+    <!-- Right Sidebar -->
+    <div class="right-sidebar" id="sidebar-right">
+      <div class="close-sidebar" onclick="closeRightSidebar()">✕</div>
+      <h2>Recommended Articles</h2>
+      <ul>
+        <li><a href="./article1.html" class="current">How to Write Effective Prompts</a></li>
+        <li><a href="./article2.html">Top 10 ChatGPT Use Cases</a></li>
+        <li><a href="./article3.html">Improving AI Outputs with Context</a></li>
+      </ul>
+      
+      <h2>Interactive Tools</h2>
+      <p>Try our new <a href="#">Prompt Builder</a> to create tailored instructions.</p>
+      
+      <h2>Newsletter</h2>
+      <p>Stay updated with the latest AI trends. <a href="#">Subscribe now!</a></p>
+      
+      <h2>Special Offers</h2>
+      <p><strong>50% Off</strong> on premium documentation templates! <a href="#">Claim now</a></p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 ChatGPT Docs. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+  </footer>
+</body>
+</html>
